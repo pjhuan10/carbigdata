@@ -1,4 +1,4 @@
-package com.example.carbigdata.entity;
+package com.example.carbigdata.core.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

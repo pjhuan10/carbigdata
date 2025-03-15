@@ -1,8 +1,8 @@
-package com.example.carbigdata.repository;
+package com.example.carbigdata.dataprovider.repository;
 
-import com.example.carbigdata.entity.Customer;
-import com.example.carbigdata.entity.Occurrence;
-import com.example.carbigdata.entity.OccurrenceStatus;
+import com.example.carbigdata.core.domain.Customer;
+import com.example.carbigdata.core.domain.Occurrence;
+import com.example.carbigdata.core.domain.OccurrenceStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

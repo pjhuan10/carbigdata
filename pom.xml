@@ -88,7 +88,13 @@
 		<dependency>
 			<groupId>io.minio</groupId>
 			<artifactId>minio</artifactId>
-			<version>8.3.4</version>
+			<version>8.5.17</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tngtech.archunit</groupId>
+			<artifactId>archunit-junit5</artifactId>
+			<version>0.22.0</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

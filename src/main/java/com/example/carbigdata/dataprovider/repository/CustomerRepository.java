@@ -1,6 +1,6 @@
-package com.example.carbigdata.repository;
+package com.example.carbigdata.dataprovider.repository;
 
-import com.example.carbigdata.entity.Customer;
+import com.example.carbigdata.core.domain.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
