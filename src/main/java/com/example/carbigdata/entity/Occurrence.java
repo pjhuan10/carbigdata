@@ -24,7 +24,7 @@ public class Occurrence {
 
     private String description;
 
-    private LocalDate dataOcorrencia;
+    private LocalDate occurrenceDate;
 
     @Enumerated(EnumType.STRING)
     private OccurrenceStatus status;
