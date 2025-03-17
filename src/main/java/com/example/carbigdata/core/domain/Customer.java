@@ -2,11 +2,15 @@ package com.example.carbigdata.core.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.Builder;
+import lombok.*;
 
 
 @Entity
 @Builder
+@Setter
+@Getter
+@RequiredArgsConstructor
+@AllArgsConstructor
 @Table(name = "customer")
 public class Customer {
 

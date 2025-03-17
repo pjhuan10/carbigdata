@@ -31,4 +31,8 @@ public class CustomerService {
     public void deleteCustomer(Long id) {
         customerRepository.deleteById(id);
     }
+
+    public <T> Object getAllCustomers(T any) {
+        return null;
+    }
 }

@@ -3,10 +3,16 @@ package com.example.carbigdata.core.domain;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 
 @Entity
 @Builder
+@Getter
+@Setter
+@RequiredArgsConstructor
 @Table(name = "address")
 public class Address {
 
@@ -27,5 +33,7 @@ public class Address {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
+    public Address(long l, String s, String city, String number) {
+    }
 }
 
