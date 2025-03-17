@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  # Servidor PostgreSQL
+  postgres:
+    image: postgres:latest
+    container_name: postgres-container
+    environment:
+      POSTGRES_DB: seu_banco
+      POSTGRES_USER: seu_usuario
+      POSTGRES_PASSWORD: sua_senha
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  # Servidor Min.io (Armazenamento S3)
+  minio:
+    image: minio/minio:latest
+    container_name: minio-container
+    environment:
+      MINIO_ACCESS_KEY: minioaccesskey
+      MINIO_SECRET_KEY: miniosecretkey
+    ports:
+      - "9000:9000"
+    command: server /data
+
+  # Aplicativo Java (Spring Boot)
+  app:
+    image: openjdk:11
+    container_name: spring-boot-app
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+      - minio
+
+volumes:
+  postgres-data:
