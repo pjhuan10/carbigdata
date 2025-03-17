@@ -2,6 +2,8 @@ package com.example.carbigdata.api.controller;
 
 import com.example.carbigdata.core.domain.Customer;
 import com.example.carbigdata.core.service.CustomerService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,5 +41,10 @@ public class CustomerController {
     public ResponseEntity<Void> deleteCustomer(@PathVariable Long id) {
         customerService.deleteCustomer(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping
+    public Page<Customer> getAllCustomers(Pageable pageable) {
+        return customerService.getAllCustomers(pageable);
     }
 }
